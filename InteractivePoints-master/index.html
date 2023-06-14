@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>YTÜ | baykal</title>
+		<meta name="description" content="A hover/click opaqueness background effect that makes images visible when specific points are hovered, showing some content once clicked." />
+		<meta name="keywords" content="opacity, background, hover, transparency, effect, css, html, javascript, template, point of interest, map" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<symbol id="icon-drop" viewBox="0 0 16 16">
+					<title>drop</title>
+					<path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/> </svg>
+				</symbol>
+				<symbol id="icon-github" viewBox="0 0 16 16">
+					<title>github logo</title>
+					<path d="M15 21H9V12.6C9 12.2686 9.26863 12 9.6 12H14.4C14.7314 12 15 12.2686 15 12.6V21Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M20.4 21H15V18.1C15 17.7686 15.2686 17.5 15.6 17.5H20.4C20.7314 17.5 21 17.7686 21 18.1V20.4C21 20.7314 20.7314 21 20.4 21Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M9 21V16.1C9 15.7686 8.73137 15.5 8.4 15.5H3.6C3.26863 15.5 3 15.7686 3 16.1V20.4C3 20.7314 3.26863 21 3.6 21H9Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.8056 5.11325L11.7147 3.1856C11.8314 2.93813 12.1686 2.93813 12.2853 3.1856L13.1944 5.11325L15.2275 5.42427C15.4884 5.46418 15.5923 5.79977 15.4035 5.99229L13.9326 7.4917L14.2797 9.60999C14.3243 9.88202 14.0515 10.0895 13.8181 9.96099L12 8.96031L10.1819 9.96099C9.94851 10.0895 9.67568 9.88202 9.72026 9.60999L10.0674 7.4917L8.59651 5.99229C8.40766 5.79977 8.51163 5.46418 8.77248 5.42427L10.8056 5.11325Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>			</defs>
+		</svg>
+		<main>
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev"  title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+					<a class="codrops-icon codrops-icon--drop"  title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+				</div>
+				<h1 class="codrops-header__title">Yıldız Teknik Üniversitesi</h1>
+				<p class="codrops-header__tagline"> Baykal olmak güzel bir şey </p>
+				<a class="icon-link" href="https://twitter.com/proftameryilmaz/status/942313172505120768" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg><span class="icon-text">Tamer Yılmaz twitter</span></a></a>
+			</header>
+			<p class="message">Please view this demo on a larger screen.</p>
+			<section class="interactive-points" id="interactive-1" tabindex="0">
+				<img class="static" src="img/map.png" alt="Map of London" />
+				<div class="backgrounds">
+					<div class="background__element" style="background-image: url(img/1.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/2.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/3.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/4.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/5.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/6.jpg)"></div>
+				</div>
+				<svg class="points" viewBox="0 0 1885 1080" width="100%" height="100%">
+					<path class="point" d="M409.2,195.4L409.2,195.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C416.3,213.8,415.6,201.8,409.2,195.4z"/>
+					<path class="point" d="M1069.3,589.7L1069.3,589.7c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1076.4,608.2,1075.7,596.1,1069.3,589.7z"/>
+					<path class="point" d="M1533.8,114.2L1533.8,114.2c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1541,132.6,1540.2,120.6,1533.8,114.2z"/>
+					<path class="point" d="M878.9,247.4L878.9,247.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C886,265.8,885.3,253.8,878.9,247.4z"/>
+					<path class="point" d="M615.2,658.3L615.2,658.3c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C622.3,676.8,621.6,664.7,615.2,658.3z"/>
+					<path class="point" d="M183.5,524L183.5,524c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C190.6,542.5,189.9,530.4,183.5,524z"/>
+				</svg>
+				<div class="points-tooltips">
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Yıldız Teknopark</h2><br><p class="point-tooltip__description">5 yıldır birinci türkiyenin en iyi teknoparkı</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Taş Bina</h2><br><p class="point-tooltip__description">Geçmişten günümüze uzanan kültür</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Stadyum</h2><br><p class="point-tooltip__description">Asla akşam 10-11 maçında kaleci bulunamayan yer</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">İnşaat Fakültesi</h2><br><p class="point-tooltip__description">Geleceği inşa edenlerin yeri</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Etkinlik Alanı</h2><br><p class="point-tooltip__description">En görkemli törenlerin gerçekleştiği yer</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">A Kapısı</h2><br><p class="point-tooltip__description">Her gün evereste tırmanmak çok güzel bir aktivite</p></div>
+				</div>
+				<div class="points-content">
+					<div class="point-content">
+						<h3 class="point-content__title">Yıldız Teknopark</h3>
+						<p class="point-content__subtitle">24<sup></sup>February, 1911</p>
+						<p class="point-content__text">5 yıldır birinci türkiyenin en iyi teknoparkı.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">rektörle selfi çektirme mekanı </h3>
+						<p class="point-content__subtitle">3<sup></sup> March, 1911</p>
+						<p class="point-content__text">Geçmişten günümüze uzanan kültür</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Stadyum da eğlenmek </h3>
+						<p class="point-content__subtitle">19<sup></sup>July, 1911</p>
+						<p class="point-content__text">Efsaneye göre 1955 den beri sürekli inşaat halinde olup yeni şeyler ekleniyor :D</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">İnşaat Fakültesi</h3>
+						<p class="point-content__subtitle">12<sup></sup> August, 1911</p>
+						<p class="point-content__text">Geleceği inşa edenlerin yeri.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Etkinlik Alanı</h3>
+						<p class="point-content__subtitle">26<sup></sup> March, 1911</p>
+						<p class="point-content__text">En görkemli törenlerin gerçekleştiği yer</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">A Kapısı</h3>
+						<p class="point-content__subtitle">14<sup></sup>January, 1911</p>
+						<p class="point-content__text">Her gün evereste tırmanmak çok güzel bir aktivite.</p>
+					</div>
+				</div>
+			</section>
+			<section class="content">
+				<div class="content__inner">
+					<h2 class="content__title">Yıldızlı olmak ayrıcalıktır</h2> 
+					<h3 class="content__subtitle">yanlızca derse girerek;<br/> mühendis olunmaz.</h3>
+					<p>yapacak çok iş var ama artık sonuna geldik . bir yılın daha ucuna geldik . yeni dönemde çok daha hızlı , çok daha kaliteli ve en önemlisi yıldız gibi yapmaya geliyoruz , geliyorum.<br/> bu proje ytü kültür için yaptığım bir web sitesi projesi. buraya her fakülte hatta tüm kampüsler eklenecek geçmişten bu güne ve bir ytü tarihçesi olacak</p>
+					<p class="margin-paragraph"><strong>o kadar gülüp gezdiğime bakamayın aslında baya çalışıyorum :D:D:D bu site proje 82 (okula başladığımdan beri)</strong></p>
+				</div>
+			</section>
+			<section class="interactive-points interactive-points--alter" id="interactive-2" tabindex="0">
+				<img class="static" src="img/map.png" alt="Map of London" />
+				<div class="backgrounds">
+					<div class="background__element" style="background-image: url(img/1.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/2.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/3.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/4.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/5.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/6.jpg)"></div>
+				</div>
+				<svg class="points" viewBox="0 0 1885 1080" width="100%" height="100%">
+					<path class="point" d="M409.2,195.4L409.2,195.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C416.3,213.8,415.6,201.8,409.2,195.4z"/>
+					<path class="point" d="M1069.3,589.7L1069.3,589.7c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1076.4,608.2,1075.7,596.1,1069.3,589.7z"/>
+					<path class="point" d="M1533.8,114.2L1533.8,114.2c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1541,132.6,1540.2,120.6,1533.8,114.2z"/>
+					<path class="point" d="M878.9,247.4L878.9,247.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C886,265.8,885.3,253.8,878.9,247.4z"/>
+					<path class="point" d="M615.2,658.3L615.2,658.3c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C622.3,676.8,621.6,664.7,615.2,658.3z"/>
+					<path class="point" d="M183.5,524L183.5,524c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C190.6,542.5,189.9,530.4,183.5,524z"/>
+				</svg>
+				<div class="points-tooltips">
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Yıldız Teknopark</h2><br><p class="point-tooltip__description">5 yıldır birinci türkiyenin en iyi teknoparkı</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Taş Bina</h2><br><p class="point-tooltip__description">Geçmişten günümüze uzanan kültür</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Stadyum</h2><br><p class="point-tooltip__description">Asla akşam 10-11 maçında kaleci bulunamayan yer</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">İnşaat Fakültesi</h2><br><p class="point-tooltip__description">Geleceği inşa edenlerin yeri</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Etkinlik Alanı</h2><br><p class="point-tooltip__description">En görkemli törenlerin gerçekleştiği yer</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">A Kapısı</h2><br><p class="point-tooltip__description">Her gün evereste tırmanmak çok güzel bir aktivite</p></div>
+				</div>
+				<div class="points-content">
+					<div class="point-content">
+						<h3 class="point-content__title">Yıldız Teknopark</h3>
+						<p class="point-content__subtitle">24<sup></sup> nisan, 1911</p>
+						<p class="point-content__text">5 yıldır birinci türkiyenin en iyi teknoparkı.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">rektörle selfi çektirme mekanı </h3>
+						<p class="point-content__subtitle">3<sup></sup> mart, 1911</p>
+						<p class="point-content__text">Geçmişten günümüze uzanan kültür</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Stadyum da eğlenmek </h3>
+						<p class="point-content__subtitle">19<sup></sup>kasım, 1911</p>
+						<p class="point-content__text">Efsaneye göre 1955 den beri sürekli inşaat halinde olup yeni şeyler ekleniyor :D</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">İnşaat Fakültesi</h3>
+						<p class="point-content__subtitle">12<sup></sup>ağustos, 1911</p>
+						<p class="point-content__text">Geleceği inşa edenlerin yeri.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Etkinlik Alanı</h3>
+						<p class="point-content__subtitle">26<sup></sup> mart, 1911</p>
+						<p class="point-content__text">En görkemli törenlerin gerçekleştiği yer</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">A Kapısı</h3>
+						<p class="point-content__subtitle">14<sup></sup> şubat, 1911</p>
+						<p class="point-content__text">Her gün evereste tırmanmak çok güzel bir aktivite.</p>
+					</div>
+				</div>
+			</section>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p><strong>yıldızAI geliyor <a href="https://www.instagram.com/yildizyapayzeka/">yıldızAI</a></strong></p>
+	
+				<p>eğer hoşunuza gittiyse yakında yapacaklarım:</p>
+				<a class="media-item" href="  ">
+					<img class="media-item__img" src="img/related/c.png">
+					<h3 class="media-item__title">ilk yerli açık kaynaklı yapay zeka</h3>
+				</a>
+				<a class="media-item" href="  ">
+					<img class="media-item__img" src="img/related/ImageTiltEffect.jpg">
+					<h3 class="media-item__title">yapay zeka rehberi </h3>
+				</a>
+			</section>
+		</main>
+		<script src="js/lunar.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			new PointsMap(document.querySelector('#interactive-1'));
+			new PointsMap(document.querySelector('#interactive-2'), {
+				// Maximum opacity that the background element of a Point can have when the point is active (mouse gets closer to it).
+				maxOpacityOnActive : 1,
+				// When the mouse is [activeOn]px away from one point, its image gets opacity = point.options.maxOpacity.
+				activeOn : 90
+			});
+		})();
+		</script>
+	</body>
+</html>
